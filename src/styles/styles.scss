@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bg-nav-content{
+  background: #303030;
+}
+
+.text-selected-icon-nav {
+  color: #BBC2FFE5;
+}
+
+.bg-selected-icon-nav {
+  background: linear-gradient(180deg, #5462DE 60%, #9954DE 100%);
+}
+
+.bg-border-selected-icon-nav {
+  background: linear-gradient(137.95deg, #28C5DB 10%, #A218E3 89.96%);
+}
+
+.bg-nav {
+  background: #BBC2FF33;
+  transition: 300ms;
+  &:hover{
+    background: #BBC2FF53;
+  }
+}
