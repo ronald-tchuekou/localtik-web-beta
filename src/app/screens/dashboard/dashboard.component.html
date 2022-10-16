@@ -1,1 +1,20 @@
-<p>dashboard works!</p>
+<div class="w-full h-full flex flex-row">
+  <div class="flex-none h-full w-[300px] hidden md:flex bg-[#BBC2FF40] flex-col items-center py-10">
+    <app-image-loader
+      image_url="/assets/images/default_profile.png"
+      class="block h-[150px] w-[150px]"></app-image-loader>
+    <div class="text-2xl text-gray-600 mt-5">
+      Ronald Tchuekou
+    </div>
+    <div class="text-lg text-gray-400">ronaldtchuekou@gmail.com</div>
+    <div class="text-lg text-purple-500 my-8">Compte gratuit</div>
+    <div class="w-full border border-white"></div>
+    <div class="mt-5 w-full flex flex-row justify-between items-center px-3">
+      <div class="text-sm text-gray-400">Créé le :</div>
+      <div class="text-lg text-gray-500">Lundi 10 Janvier 2021</div>
+    </div>
+  </div>
+  <div class="w-full h-full">
+    <app-header></app-header>
+  </div>
+</div>
