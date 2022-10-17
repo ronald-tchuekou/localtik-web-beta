@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FoldersRoutingModule } from './folders-routing.module';
 import { FoldersComponent } from './folders.component';
+import {HeaderModule} from "../../components/header/header.module";
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FoldersComponent } from './folders.component';
     ],
     imports: [
         CommonModule,
-        FoldersRoutingModule
+        FoldersRoutingModule,
+        HeaderModule
     ]
 })
 export class FoldersModule { }

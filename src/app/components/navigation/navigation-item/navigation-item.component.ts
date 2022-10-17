@@ -7,7 +7,7 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 })
 export class NavigationItemComponent implements OnInit {
   @Input() activated = false
-  @ViewChild('button') button: any
+  @ViewChild('buttonElt') button: any
 
   constructor() {
   }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { EstablishmentsRoutingModule } from './establishments-routing.module';
 import { EstablishmentsComponent } from './establishments.component';
+import {HeaderModule} from "../../components/header/header.module";
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { EstablishmentsComponent } from './establishments.component';
     ],
     imports: [
         CommonModule,
-        EstablishmentsRoutingModule
+        EstablishmentsRoutingModule,
+        HeaderModule
     ]
 })
 export class EstablishmentsModule { }

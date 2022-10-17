@@ -1,7 +1,11 @@
 <button
-  #button
-  class="p-1 rounded-full w-12 {{activated ? 'bg-border-selected-icon-nav' : 'bg-nav'}}">
-  <div class="p-2 rounded-full {{activated ? 'bg-selected-icon-nav' : 'bg-transparent'}}">
-    <ng-content></ng-content>
+  matRipple
+  matRippleColor="rgba(255, 255, 255, 0.3)"
+  mat-icon-button
+  style="height: 3rem; width: 3rem;">
+  <div #buttonElt class="p-1 rounded-full w-full h-full {{activated ? 'bg-border-selected-icon-nav' : 'bg-nav'}}">
+    <div class="p-2 rounded-full {{activated ? 'bg-selected-icon-nav' : 'bg-transparent'}}">
+      <ng-content></ng-content>
+    </div>
   </div>
 </button>

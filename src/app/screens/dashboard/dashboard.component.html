@@ -14,7 +14,104 @@
       <div class="text-lg text-gray-500">Lundi 10 Janvier 2021</div>
     </div>
   </div>
-  <div class="w-full h-full">
-    <app-header></app-header>
+  <div class="w-full h-full flex flex-col">
+    <app-header class="block flex-none"></app-header>
+    <div class="h-full w-full overflow-y-auto p-5 space-y-3">
+      <div class="text-lg text-gray-500">Bonjour, Ronald</div>
+      <div class="border border-gray-300 rounded-lg p-3 w-full flex flex-col md:flex-row md:justify-between gap-3">
+        <div class="flex flex-row gap-4 items-center">
+          <app-chart
+            [value]="50"
+            class="block flex-none h-16 w-16"></app-chart>
+          <div class="-space-y-1">
+            <div class="text-lg text-gray-600">Stockage</div>
+            <div class="text-sm text-gray-400">
+              <span class="text-purple-500 font-medium text-base">0,5 Go</span> / 1 G
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row gap-4 items-center">
+          <app-chart
+            bg_class="stroke-sky-500/20"
+            bg_indicator="stroke-sky-500"
+            text_fill="fill-sky-500"
+            [value]="0"
+            class="block flex-none h-16 w-16"></app-chart>
+          <div class="-space-y-1">
+            <div class="text-lg text-gray-600">Synchronisation</div>
+            <div class="text-sm text-gray-400">
+              <span class="text-sky-500 font-medium text-base">0 o</span> synchronisé
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row gap-4 items-center">
+          <app-chart
+            bg_class="stroke-orange-500/20"
+            bg_indicator="stroke-orange-500"
+            text_fill="fill-orange-500"
+            [value]="0"
+            class="block flex-none h-16 w-16"></app-chart>
+          <div class="-space-y-1">
+            <div class="text-lg text-gray-600">Établissements actifs</div>
+            <div class="text-sm text-gray-400">
+              <span class="text-orange-500 font-medium text-base">0 o</span> en cours d'utilisation
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-gray-300 rounded-lg p-3 w-full">
+        <div class="text-gray-500 text-base md:text-lg">Espace de stockage utilisé</div>
+        <div class="p-4"></div>
+        <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+          <div class="font-mono">
+            <div class="text-xl md:text-2xl font-light text-gray-400">
+              <span class="text-2xl md:text-5xl font-normal text-gray-500">30</span>% <span
+              class="text-black font-normal text-sm md:text-base">(300 Mo)</span>
+            </div>
+            <div class="flex flex-row gap-3 items-center">
+              <div class="flex-none w-3 h-3 bg-sky-400 rounded-full"></div>
+              <div class="text-sm text-gray-600">Dossiers crées</div>
+            </div>
+          </div>
+          <div class="font-mono">
+            <div class="text-xl md:text-2xl font-light text-gray-400">
+              <span class="text-2xl md:text-5xl text-gray-500 font-normal">9</span>% <span
+              class="text-black font-normal text-sm md:text-base">(85 Mo)</span>
+            </div>
+            <div class="flex flex-row gap-3 items-center">
+              <div class="flex-none w-3 h-3 bg-purple-400 rounded-full"></div>
+              <div class="text-sm text-gray-600">Vidéos</div>
+            </div>
+          </div>
+          <div class="font-mono">
+            <div class="text-xl md:text-2xl font-light text-gray-400">
+              <span class="text-2xl md:text-5xl text-gray-500 font-normal">11</span>% <span
+              class="text-black font-normal text-sm md:text-base">(115 Mo)</span>
+            </div>
+            <div class="flex flex-row gap-3 items-center">
+              <div class="flex-none w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <div class="text-sm text-gray-600">Vidéos</div>
+            </div>
+          </div>
+          <div class="font-mono">
+            <div class="text-xl md:text-2xl font-light text-gray-400">
+              <span class="text-2xl md:text-5xl text-gray-500 font-normal">50</span>% <span
+              class="text-black font-normal text-sm md:text-base">(0,5 Go)</span>
+            </div>
+            <div class="flex flex-row gap-3 items-center">
+              <div class="flex-none w-3 h-3 bg-gray-300 rounded-full"></div>
+              <div class="text-sm text-gray-600">Libres</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-2"></div>
+        <div class="bg-gray-300 w-full h-2 w-full rounded-full relative">
+          <div class="absolute top-0 left-0 h-full rounded-full w-[50%] bg-yellow-400"></div>
+          <div class="absolute top-0 left-0 h-full rounded-full w-[39%] bg-purple-400"></div>
+          <div class="absolute top-0 left-0 h-full rounded-full w-[30%] bg-sky-400"></div>
+        </div>
+      </div>
+      <app-establishments-list class="block"></app-establishments-list>
+    </div>
   </div>
 </div>
