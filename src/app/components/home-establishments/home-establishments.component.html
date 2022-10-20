@@ -1,0 +1,21 @@
+<div class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-5">
+  <app-establishment-list
+    [(currentEstablishment)]="currentEstablishment"
+    class="block h-96 w-full"></app-establishment-list>
+  <app-establishment-details class="block h-96 w-full"></app-establishment-details>
+</div>
+<div class="md:hidden h-64">
+  <mat-tab-group class="h-full mat-hidden-tab" [selectedIndex]="currentEstablishment.id ? 1 : 0">
+    <mat-tab>
+      <app-establishment-list
+        [(currentEstablishment)]="currentEstablishment"
+        class="block h-full w-full"></app-establishment-list>
+    </mat-tab>
+    <mat-tab>
+      <app-establishment-details
+        (onBack)="currentEstablishment = {}"
+        [withBackButton]="true"
+        class="block h-full w-full"></app-establishment-details>
+    </mat-tab>
+  </mat-tab-group>
+</div>

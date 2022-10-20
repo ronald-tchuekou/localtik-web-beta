@@ -1,0 +1,51 @@
+<div class="border border-gray-300 rounded-lg h-full w-full flex flex-col">
+  <div class="flex flex-row justify-between items-start gap-4 flex-none p-3">
+    <div class="flex flex-row items-center">
+      <button *ngIf="withBackButton" (click)="onBack.emit()" mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <div class="text-base md:text-lg text-gray-500">
+        Détails de l'établissement sélectionné
+      </div>
+    </div>
+    <div>
+      <button mat-icon-button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="h-full w-full overflow-y-auto">
+    <div class="p-3">
+      <div class="w-full flex flex-col md:flex-row md:justify-between gap-3">
+        <div class="flex flex-row gap-4 items-center">
+          <app-chart
+            bg_class="stroke-green-500/20"
+            bg_indicator="stroke-green-500"
+            text_fill="fill-green-500"
+            [value]="50"
+            class="block flex-none h-16 w-16"></app-chart>
+          <div class="-space-y-1">
+            <div class="text-lg text-gray-600">Stockage</div>
+            <div class="text-sm text-gray-400">
+              <span class="text-green-500 font-medium text-base">0,5 Go</span> / 1 G
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row gap-4 items-center">
+          <app-chart
+            bg_class="stroke-sky-500/20"
+            bg_indicator="stroke-sky-500"
+            text_fill="fill-sky-500"
+            [value]="0"
+            class="block flex-none h-16 w-16"></app-chart>
+          <div class="-space-y-1">
+            <div class="text-lg text-gray-600">Synchronisation</div>
+            <div class="text-sm text-gray-400">
+              <span class="text-sky-500 font-medium text-base">0 o</span> synchronisé
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="border border-gray-300 rounded-lg h-full w-full flex flex-col pb-3">
+  <div class="text-base md:text-lg text-gray-500 flex-none p-3">Liste d'établissements</div>
+  <div class="w-full h-full overflow-y-auto">
+    <div class="flex flex-col gap-2 px-3">
+      <ng-container *ngFor="let item of establishments">
+        <app-establishment-list-item
+          (onItemClick)="currentEstablishmentChange.emit(item)"
+          [active]="currentEstablishment.id === item.id"
+          class="block"></app-establishment-list-item>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -27,6 +27,10 @@ body {
   background: linear-gradient(137.95deg, #28C5DB 10%, #A218E3 89.96%);
 }
 
+.bg-default-select {
+  background: linear-gradient(153.12deg, rgba(40, 197, 219, 0.25) 1.03%, rgba(162, 24, 227, 0.25) 81.5%);
+}
+
 .bg-nav {
   background: #BBC2FF33;
   transition: 300ms;
@@ -36,13 +40,24 @@ body {
   }
 }
 
-.app-container{
+.app-container {
   height: calc(100% - 70px);
 }
 
+.establishment-item {
+  .content {
+    width: calc(100% - 80px);
+  }
+}
+
 @media (min-width: 768px) {
-  .app-container{
+  .app-container {
     height: 100%;
+  }
+  .establishment-item {
+    .content {
+      width: calc(100% - 100px);
+    }
   }
 }
 
@@ -77,6 +92,18 @@ body {
       text-align: center;
       font-size: 28px;
       letter-spacing: 2px;
+    }
+  }
+}
+
+.mat-hidden-tab {
+  .mat-tab-header {
+    display: none;
+  }
+
+  &.h-full {
+    .mat-tab-body-wrapper {
+      height: 100%;
     }
   }
 }
