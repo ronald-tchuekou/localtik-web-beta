@@ -1,4 +1,4 @@
-<div class="w-full bg-white py-3 px-5 flex gap-3 items-center justify-between">
+<div class="w-full bg-white py-3 px-5 md:px-10 flex gap-3 items-center justify-between">
   <div class="w-full max-w-[300px] relative">
     <input
       placeholder="Rechercher un contenu"
@@ -21,8 +21,44 @@
         </svg>
       </div>
     </button>
-    <app-image-loader
-      image_url="/assets/images/default_profile.png"
-      class="h-10 w-10"></app-image-loader>
+    <div class="relative flex-none h-10 w-10 group">
+      <app-image-loader
+        image_url="/assets/images/default_profile.png"
+        class="h-10 w-10"></app-image-loader>
+      <div class="absolute -right-6 user_menu rounded-md shadow-lg border bg-white z-30">
+        <div class="w-full flex flex-row gap-3 border-b p-3">
+          <app-image-loader
+            image_url="/assets/images/default_profile.png"
+            class="h-16 w-16"></app-image-loader>
+          <div class="whitespace-nowrap">
+            <div class="text-xl text-gray-600">Ronald Tchuekou</div>
+            <div class="text-xs sm:text-base text-gray-400">ronaldtchuekou@gmail.com</div>
+          </div>
+        </div>
+        <div class="block">
+          <button
+            (click)="navigateTo('/settings')"
+            matRipple
+            matRippleColor="rgba(0, 0, 0, 0.025)"
+            class="w-full text-sm md:text-base text-gray-500 px-4 py-3 text-left hover:bg-gray-100">
+            Paramètres
+          </button>
+          <button
+            (click)="downloadLocalVersion()"
+            matRipple
+            matRippleColor="rgba(0, 0, 0, 0.025)"
+            class="w-full text-sm md:text-base text-gray-500 px-4 py-3 text-left hover:bg-gray-100">
+            Télécharger la version local
+          </button>
+          <button
+            (click)="logout()"
+            matRipple
+            matRippleColor="rgba(239, 68, 68, 0.05)"
+            class="w-full text-sm md:text-base text-red-500 px-4 py-3 border-t text-left hover:bg-red-500/5">
+            Déconnexion
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

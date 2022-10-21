@@ -11,6 +11,10 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+button {
+  transition: 300ms;
+}
+
 .bg-nav-content {
   background: #303030;
 }
@@ -106,4 +110,24 @@ body {
       height: 100%;
     }
   }
+}
+
+.user_menu {
+  top: calc(100% + 15px);
+  transition: 300ms;
+  @apply transform scale-0 origin-top-right opacity-0 group-hover:scale-100 delay-200 group-hover:opacity-100
+}
+
+.user_menu:before {
+  content: "";
+  position: absolute;
+  top: -10.6px;
+  right: 32px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-top-left-radius: 5px;
+  border-top: 1px solid #e5e7eb;
+  border-left: 1px solid #e5e7eb;
+  transform: rotate(45deg);
 }

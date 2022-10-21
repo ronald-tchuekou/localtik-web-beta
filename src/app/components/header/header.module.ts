@@ -4,6 +4,7 @@ import { HeaderComponent } from './header.component';
 import {MatIconModule} from "@angular/material/icon";
 import {ImageLoaderModule} from "../image-loader/image-loader.module";
 import {MatButtonModule} from "@angular/material/button";
+import {MatRippleModule} from "@angular/material/core";
 
 
 
@@ -11,12 +12,13 @@ import {MatButtonModule} from "@angular/material/button";
   declarations: [
     HeaderComponent
   ],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    ImageLoaderModule,
-    MatButtonModule
-  ],
+    imports: [
+        CommonModule,
+        MatIconModule,
+        ImageLoaderModule,
+        MatButtonModule,
+        MatRippleModule
+    ],
   exports: [
     HeaderComponent
   ]
