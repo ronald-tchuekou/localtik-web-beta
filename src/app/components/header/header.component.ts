@@ -1,28 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  navigateTo(path: string){
-    return this.router.navigate([path])
-  }
-
-  logout() {
-    // TODO
-  }
-
-  downloadLocalVersion(){
-    // TODO
-  }
 }

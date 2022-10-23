@@ -41,7 +41,7 @@ export class NavigationComponent implements OnInit, AfterViewInit {
           this.indicatorComponent.getElement().style.top = `${rect.top + 3}px`
           return
         }
-        if (this.currentPath === '/') {
+        if (this.currentPath === '/cloud') {
           const rect = this.navItem1.getRect()
           this.indicatorComponent.getElement().style.top = `${rect.top + 3}px`
         }
@@ -51,5 +51,9 @@ export class NavigationComponent implements OnInit, AfterViewInit {
 
   navigateTo(path: string) {
     return this.router.navigate([path])
+  }
+
+  checkPath(path: string) {
+    return this.currentPath.includes(path)
   }
 }

@@ -5,19 +5,25 @@ import {MatIconModule} from "@angular/material/icon";
 import {ImageLoaderModule} from "../image-loader/image-loader.module";
 import {MatButtonModule} from "@angular/material/button";
 import {MatRippleModule} from "@angular/material/core";
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { HeaderNotificationsComponent } from './header-notifications/header-notifications.component';
+import {MatMenuModule} from "@angular/material/menu";
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    HeaderMenuComponent,
+    HeaderNotificationsComponent
   ],
     imports: [
         CommonModule,
         MatIconModule,
         ImageLoaderModule,
         MatButtonModule,
-        MatRippleModule
+        MatRippleModule,
+        MatMenuModule
     ],
   exports: [
     HeaderComponent

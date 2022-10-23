@@ -1,0 +1,56 @@
+<div class="bg-[#BBC2FF40] w-full h-full relative">
+  <div class="p-5 text-2xl text-gray-600">Mes fichiers</div>
+  <div class="px-2 text-lg text-gray-400">GESTIONNAIRES DES FICHIERS</div>
+  <div class="w-full p-2 space-y-1">
+    <app-side-menu-item
+      class="block w-full"
+      title="Espace nuagique"
+      path="/folders/f-cloud"
+      [withSub]="true"
+      [currentPath]="currentPath"
+      [active]="checkPath('/folders/f-cloud')"
+      [subMenu]="subMenuContent">
+      <svg-cloud-side [activated]="checkPath('/folders/f-cloud')"></svg-cloud-side>
+    </app-side-menu-item>
+    <app-side-menu-item
+      title="Récents"
+      path="/folders/recent"
+      class="block w-full"
+      [active]="checkPath('/folders/recent')">
+      <svg-clock-side [activated]="checkPath('/folders/recent')"></svg-clock-side>
+    </app-side-menu-item>
+    <app-side-menu-item
+      title="Corbeille"
+      path="/folders/trash"
+      class="block w-full"
+      [active]="checkPath('/folders/trash')">
+      <svg-trash-side [activated]="checkPath('/folders/trash')"></svg-trash-side>
+    </app-side-menu-item>
+  </div>
+  <div class="pt-3 px-2 text-lg text-gray-400">ÉLÉMENTS PARTAGÉS</div>
+  <div class="w-full p-2 space-y-1">
+    <app-side-menu-item
+      title="Dossiers"
+      path="/folders/share-folders"
+      class="block w-full"
+      [active]="checkPath('/folders/share-folders')">
+      <svg-menu-folders [activated]="checkPath('/folders/share-folders')"></svg-menu-folders>
+    </app-side-menu-item>
+    <app-side-menu-item
+      title="Files"
+      path="/folders/share-files"
+      class="block w-full"
+      [active]="checkPath('/folders/share-files')">
+      <svg-file-side [activated]="checkPath('/folders/share-files')"></svg-file-side>
+    </app-side-menu-item>
+  </div>
+  <div class="absolute bottom-0 left-0 w-full border-t border-white p-3">
+    <div class="text-xl text-gray-500">Gratuit</div>
+    <div class="h-[5px] w-full rounded-full relative bg-gray-300">
+      <div class="absolute top-0 left-0 w-1/2 bg-sky-400 h-full rounded-full"></div>
+    </div>
+    <div class="pt-2 text-base text-gray-400">
+      <span class="text-sky-400">0.5 Go</span> sur 1 Go
+    </div>
+  </div>
+</div>

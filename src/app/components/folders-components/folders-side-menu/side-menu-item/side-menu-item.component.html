@@ -1,0 +1,43 @@
+<button class="flex flex-row items-center gap-3 px-2 {{
+  active ? 'bg-select-layout text-gray-700' : ' hover:bg-black/10 text-gray-500'
+}} w-full rounded-md">
+  <div class="flex-none flex flex-row items-center">
+    <div (click)="toggleSubMenu()" class="w-6">
+      <svg-arrow-right *ngIf="withSub" [rotate]="show" [activated]="active"></svg-arrow-right>
+    </div>
+    <div (click)="goTo(path)" class="w-6">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <span
+    (click)="goTo(path)"
+    class="block truncate text-base font-medium w-full py-[4px] text-left">
+    {{title}}
+  </span>
+</button>
+<div
+  #subMenuContent
+  class="space-y-1 py-0 overflow-hidden h-0"
+  *ngIf="withSub">
+  <button
+    (click)="goTo('/folders/f-cloud/' + item.id)"
+    *ngFor="let item of subMenu" class="flex flex-row items-center gap-3 px-2 {{
+      checkPath('/folders/f-cloud/' + item.id) ?
+      ' bg-select-layout text-gray-700' :
+      ' hover:bg-black/10 text-gray-500'
+    }} w-full rounded-md">
+    <div class="flex-none flex flex-row items-center">
+      <div class="w-6">
+      </div>
+      <div class="w-6">
+      </div>
+      <div class="w-6">
+        <svg-menu-folders [activated]="checkPath('/folders/f-cloud/' + item.id)"></svg-menu-folders>
+      </div>
+    </div>
+    <span
+      class="block truncate text-base font-medium w-full py-[4px] text-left">
+    {{item.folderName}}
+  </span>
+  </button>
+</div>

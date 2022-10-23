@@ -12,34 +12,34 @@
       <div class="z-10 flex flex-row md:flex-col gap-4 w-full justify-between px-5 md:px-2 py-2">
         <app-navigation-item
           #navItem1
-          (click)="navigateTo('/')"
-          [activated]="currentPath === '/'">
+          (click)="navigateTo('/cloud')"
+          [activated]="checkPath('/cloud')">
           <app-cloud
-            [activated]="currentPath === '/'"
+            [activated]="checkPath('/cloud')"
             class="text-selected-icon-nav"></app-cloud>
         </app-navigation-item>
         <app-navigation-item
           #navItem2
           (click)="navigateTo('/folders')"
-          [activated]="currentPath === '/folders'">
+          [activated]="checkPath('/folders')">
           <app-folders
-            [activated]="currentPath === '/folders'"
+            [activated]="checkPath('/folders')"
             class="text-selected-icon-nav"></app-folders>
         </app-navigation-item>
         <app-navigation-item
           #navItem3
           (click)="navigateTo('/establishments')"
-          [activated]="currentPath === '/establishments'">
+          [activated]="checkPath('/establishments')">
           <app-establishments
-            [activated]="currentPath === '/establishments'"
+            [activated]="checkPath('/establishments')"
             class="text-selected-icon-nav"></app-establishments>
         </app-navigation-item>
         <app-navigation-item
           #navItem4
           (click)="navigateTo('/settings')"
-          [activated]="currentPath === '/settings'">
+          [activated]="checkPath('/settings')">
           <app-settings
-            [activated]="currentPath === '/settings'"
+            [activated]="checkPath('/settings')"
             class="text-selected-icon-nav"></app-settings>
         </app-navigation-item>
       </div>

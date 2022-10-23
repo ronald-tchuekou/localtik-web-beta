@@ -32,7 +32,11 @@ button {
 }
 
 .bg-default-select {
-  background: linear-gradient(153.12deg, rgba(40, 197, 219, 0.25) 1.03%, rgba(162, 24, 227, 0.25) 81.5%);
+  background: linear-gradient(168deg, rgba(40, 197, 219, 0.25) 1.03%, rgba(162, 24, 227, 0.25) 81.5%);
+}
+
+.bg-select-layout {
+  background: linear-gradient(178deg, rgba(40, 197, 219, 0.25) 21.26%, rgba(162, 24, 227, 0.25) 75.5%);
 }
 
 .bg-nav {
@@ -112,16 +116,10 @@ button {
   }
 }
 
-.user_menu {
-  top: calc(100% + 15px);
-  transition: 300ms;
-  @apply transform scale-0 origin-top-right opacity-0 group-hover:scale-100 delay-200 group-hover:opacity-100
-}
-
-.user_menu:before {
+.head-notification:before, .user_menu:before {
   content: "";
   position: absolute;
-  top: -10.6px;
+  top: -2px;
   right: 32px;
   width: 20px;
   height: 20px;
@@ -130,4 +128,17 @@ button {
   border-top: 1px solid #e5e7eb;
   border-left: 1px solid #e5e7eb;
   transform: rotate(45deg);
+}
+
+.header-menu-container, .header-notification-container {
+  &.mat-menu-panel {
+    transform-origin: right top !important;
+    width: 400px !important;
+    overflow: unset !important;
+    background: unset !important;
+    padding: 0 !important;
+    top: 7px !important;
+    right: -25px !important;
+    box-shadow: unset !important;
+  }
 }
