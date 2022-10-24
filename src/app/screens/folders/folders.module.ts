@@ -10,6 +10,8 @@ import {RecentComponent} from './recent/recent.component';
 import {TrashComponent} from './trash/trash.component';
 import {ShareFoldersComponent} from './share-folders/share-folders.component';
 import {ShareFilesComponent} from './share-files/share-files.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {ShareFilesComponent} from './share-files/share-files.component';
     CommonModule,
     FoldersRoutingModule,
     HeaderModule,
-    FoldersComponentsModule
+    FoldersComponentsModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class FoldersModule {
