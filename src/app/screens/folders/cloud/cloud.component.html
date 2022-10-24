@@ -8,7 +8,7 @@
         <button
           class="text-gray-500 font-light text-base"
           mat-button>
-          <mat-icon>add</mat-icon>
+          <mat-icon class="material-symbols-outlined text-green-500">add_circle</mat-icon>
           Créer un dossier
         </button>
       </div>
@@ -16,17 +16,25 @@
         <button
           class="text-gray-500 font-light text-base"
           mat-button>
-          <mat-icon>add</mat-icon>
+          <mat-icon class="text-sky-500">arrow_circle_down</mat-icon>
           Importer des fichiers
         </button>
       </div>
-      <button mat-icon-button class="text-gray-500 lg:hidden">
-        <mat-icon>more_vert</mat-icon>
+      <div class="lg:hidden">
+        <button mat-icon-button class="text-gray-500">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </div>
+      <button
+        (click)="display_mode = 'list'"
+        mat-icon-button
+        class="{{display_mode === 'list' ? 'text-purple-500' : 'text-gray-500'}}">
+        <mat-icon>format_list_bulleted</mat-icon>
       </button>
-      <button mat-icon-button class="text-gray-500">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <button mat-icon-button class="text-gray-500">
+      <button
+        (click)="display_mode = 'grid'"
+        mat-icon-button
+        class="{{display_mode === 'grid' ? 'text-purple-500' : 'text-gray-500'}}">
         <mat-icon>apps</mat-icon>
       </button>
     </div>

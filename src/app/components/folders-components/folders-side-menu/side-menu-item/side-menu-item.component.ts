@@ -26,7 +26,7 @@ export class SideMenuItemComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     const change = changes['currentPath']
     if (change) {
-      if (change.currentValue.includes(this.path)) {
+      if (change.currentValue !== '/folders/f-cloud' && change.currentValue.includes(this.path)) {
         this.toggleSubMenu(true)
       }
     }

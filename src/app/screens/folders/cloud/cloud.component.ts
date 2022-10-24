@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class CloudComponent implements OnInit {
+  display_mode: String = 'grid'
 
   constructor() { }
 
