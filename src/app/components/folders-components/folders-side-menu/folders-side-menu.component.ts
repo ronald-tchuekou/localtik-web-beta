@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
+import {FAKE_FOLDERS, Folder} from "../../../../models/Folder";
 
 @Component({
   selector: 'app-folders-side-menu',
@@ -8,11 +9,7 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class FoldersSideMenuComponent implements OnInit, AfterViewInit {
   currentPath: string = "";
-  subMenuContent: any[] = [
-    {id: 'folder_id_1', folderName: 'Dossier 1'},
-    {id: 'folder_id_2', folderName: 'Dossier 2'},
-    {id: 'folder_id_3', folderName: 'Dossier 3'},
-  ];
+  subMenuContent: Folder[] = FAKE_FOLDERS;
 
   constructor(private router: Router) {
   }

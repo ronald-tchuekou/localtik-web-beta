@@ -1,7 +1,7 @@
 <div class="h-full w-full flex flex-col">
   <div class="w-full bg-white px-4 pb-3 flex-none flex flex-row justify-between items-center">
-    <div class="text-gray-400 font-light text-sm">
-      Espace nuagique
+    <div class="text-gray-400 font-normal text-sm">
+      Espace nuagique{{folder.name ? '/' + folder.name : ''}}
     </div>
     <div class="flex flex-row items-center">
       <div class="hidden lg:block">
@@ -39,4 +39,8 @@
       </button>
     </div>
   </div>
+  <div class="h-full w-full overflow-y-auto">
+    <app-folders-list class="block w-full p-3"></app-folders-list>
+  </div>
+  <div class="flex-none {{currentFolder ? 'h-16' : 'h-0'}} bg-[#BBC2FF40] border-l border-white w-full"></div>
 </div>

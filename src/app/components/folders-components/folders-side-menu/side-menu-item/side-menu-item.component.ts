@@ -1,5 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
+import {Folder} from "../../../../../models/Folder";
 
 @Component({
   selector: 'app-side-menu-item',
@@ -13,7 +14,7 @@ export class SideMenuItemComponent implements OnInit, OnChanges {
   @Input() title: string = "";
   @Input() currentPath: string = "";
   @Input() path: string = '';
-  @Input() subMenu: any[] = [];
+  @Input() subMenu: Folder[] = [];
   show: boolean = false;
 
   constructor(private router: Router) {

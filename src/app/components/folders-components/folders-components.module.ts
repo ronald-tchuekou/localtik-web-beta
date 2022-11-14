@@ -5,13 +5,17 @@ import {SideMenuItemComponent} from './folders-side-menu/side-menu-item/side-men
 import {SubMenuComponent} from './folders-side-menu/side-menu-item/sub-menu/sub-menu.component';
 import {SvgModule} from "../../svg/svg.module";
 import {RouterModule} from "@angular/router";
+import { FoldersListComponent } from './folders-list/folders-list.component';
+import { FolderListItemComponent } from './folders-list/folder-list-item/folder-list-item.component';
 
 
 @NgModule({
   declarations: [
     FoldersSideMenuComponent,
     SideMenuItemComponent,
-    SubMenuComponent
+    SubMenuComponent,
+    FoldersListComponent,
+    FolderListItemComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,8 @@ import {RouterModule} from "@angular/router";
     RouterModule,
   ],
   exports: [
-    FoldersSideMenuComponent
+    FoldersSideMenuComponent,
+    FoldersListComponent
   ]
 })
 export class FoldersComponentsModule {
