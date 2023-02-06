@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FAKE_FOLDERS, Folder} from "../../../../models/Folder";
+import {AppService, DisplayMode} from "../../../services/app.service";
 
 @Component({
   selector: 'app-folders-list',
@@ -21,11 +22,15 @@ export class FoldersListComponent implements OnInit {
     ...FAKE_FOLDERS,
     ...FAKE_FOLDERS,
   ]
+  isListMode: boolean = false;
 
-  constructor() {
+  constructor(private appService: AppService) {
   }
 
   ngOnInit(): void {
+    this.appService.display_mode$.subscribe((value) => {
+      this.isListMode = value === DisplayMode.LIST
+    })
   }
 
 }

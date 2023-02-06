@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { SettingsRoutingModule } from './settings-routing.module';
-import { SettingsComponent } from './settings.component';
+import {SettingsRoutingModule} from './settings-routing.module';
+import {SettingsComponent} from './settings.component';
 import {HeaderModule} from "../../components/header/header.module";
 
 
@@ -10,10 +10,11 @@ import {HeaderModule} from "../../components/header/header.module";
   declarations: [
     SettingsComponent
   ],
-    imports: [
-        CommonModule,
-        SettingsRoutingModule,
-        HeaderModule
-    ]
+  imports: [
+    CommonModule,
+    SettingsRoutingModule,
+    HeaderModule
+  ]
 })
-export class SettingsModule { }
+export class SettingsModule {
+}

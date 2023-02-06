@@ -1,1 +1,18 @@
-<p>sub-menu works!</p>
+<button
+  (click)="click.emit()"
+  class="flex flex-row items-center gap-3 px-2 py-1 {{
+      active ? ' bg-select-layout text-gray-700' : ' hover:bg-black/10 text-gray-500'
+  }} w-full rounded-md">
+  <div class="flex-none flex flex-row items-center">
+    <div class="w-6"></div>
+    <div class="w-6"></div>
+    <div class="w-6">
+      <svg-menu-folders
+        [activated]="active">
+      </svg-menu-folders>
+    </div>
+  </div>
+  <span class="block truncate text-base w-full py-[4px] text-left">
+    {{item?.name}}
+  </span>
+</button>

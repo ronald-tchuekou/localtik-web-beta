@@ -1,3 +1,34 @@
+<!-- Grid display -->
 <div
-  class="bg-white border rounded-md border-[3px] border-white hover:border-gray-300 aspect-square transition-all duration-300">
+  *ngIf="!isListMode"
+  class="bg-white border rounded-md border-[3px] border-white hover:border-gray-300 transition-all duration-300">
+  <div class="w-full h-full px-5 py-3 flex flex-col justify-center items-center relative group">
+    <div class="h-10 flex-none w-full"></div>
+    <svg-folders
+      [default]="true"
+      class="block h-full px-5">
+    </svg-folders>
+    <div class="text-base text-gray-500 flex-none">
+      Dossier 1
+    </div>
+    <div class="absolute top-1 right-1 hidden group-hover:block">
+      <button
+      mat-icon-button
+      class="hover:bg-gray-100 text-gray-400 hover:text-gray-500">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+  </div>
 </div>
+
+<!-- List display -->
+<tr *ngIf="isListMode">
+  <td></td>
+  <td>Name</td>
+  <td>Size</td>
+  <td>Type</td>
+  <td>Date</td>
+  <td>Like</td>
+  <td>Comments</td>
+  <td></td>
+</tr>

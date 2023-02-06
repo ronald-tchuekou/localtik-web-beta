@@ -1,12 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-establishments',
-  templateUrl: './establishments.component.html',
+  selector: 'svg-settings',
+  templateUrl: './svg-settings.component.html',
   styles: [
   ]
 })
-export class EstablishmentsComponent implements OnInit {
+export class SvgSettingsComponent implements OnInit {
   @Input() activated = false
 
   constructor() { }

@@ -23,9 +23,10 @@ import {MatButtonModule} from "@angular/material/button";
     ShareFoldersComponent,
     ShareFilesComponent
   ],
-  exports: [
-    FoldersComponent
-  ],
+   exports: [
+      FoldersComponent,
+      ShareFoldersComponent
+   ],
   imports: [
     CommonModule,
     FoldersRoutingModule,

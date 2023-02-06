@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  display_mode_key: "__localtik_display_mode_key__"
 };
 
 /*

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-trafic',
-  templateUrl: './trafic.component.html',
+  selector: 'svg-nav-bg',
+  templateUrl: './svg-nav-bg.component.html',
   styles: [
   ]
 })
-export class TraficComponent implements OnInit {
+export class SvgNavBgComponent implements OnInit {
 
   constructor() { }
 

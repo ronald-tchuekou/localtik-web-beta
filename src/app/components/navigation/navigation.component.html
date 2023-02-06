@@ -4,43 +4,43 @@
       <img src="/assets/images/logo.png" class="w-full" alt="App logo"/>
     </div>
     <div class="relative w-full md:pl-1 flex justify-end items-center">
-      <app-indicator
+      <svg-indicator
         #indicatorComponent
         class="block fixed left-0 z-10 w-4 h-11 hidden md:block transition-all duration-300">
-      </app-indicator>
-      <app-nav-bg class="absolute h-[500px] hidden md:block"></app-nav-bg>
+      </svg-indicator>
+      <svg-nav-bg class="absolute h-[500px] hidden md:block"></svg-nav-bg>
       <div class="z-10 flex flex-row md:flex-col gap-4 w-full justify-between px-5 md:px-2 py-2">
         <app-navigation-item
           #navItem1
           (click)="navigateTo('/cloud')"
           [activated]="checkPath('/cloud')">
-          <app-cloud
+          <svg-cloud
             [activated]="checkPath('/cloud')"
-            class="text-selected-icon-nav"></app-cloud>
+            class="text-selected-icon-nav"></svg-cloud>
         </app-navigation-item>
         <app-navigation-item
           #navItem2
           (click)="navigateTo('/folders')"
           [activated]="checkPath('/folders')">
-          <app-folders
+          <svg-folders
             [activated]="checkPath('/folders')"
-            class="text-selected-icon-nav"></app-folders>
+            class="text-selected-icon-nav"></svg-folders>
         </app-navigation-item>
         <app-navigation-item
           #navItem3
           (click)="navigateTo('/establishments')"
           [activated]="checkPath('/establishments')">
-          <app-establishments
+          <svg-establishments
             [activated]="checkPath('/establishments')"
-            class="text-selected-icon-nav"></app-establishments>
+            class="text-selected-icon-nav"></svg-establishments>
         </app-navigation-item>
         <app-navigation-item
           #navItem4
           (click)="navigateTo('/settings')"
           [activated]="checkPath('/settings')">
-          <app-settings
+          <svg-settings
             [activated]="checkPath('/settings')"
-            class="text-selected-icon-nav"></app-settings>
+            class="text-selected-icon-nav"></svg-settings>
         </app-navigation-item>
       </div>
     </div>
@@ -48,7 +48,7 @@
   <div class="flex-none p-4 w-full hidden md:flex items-center justify-center">
     <div class="bg-border-selected-icon-nav h-10 w-10 rounded-full p-[2px]">
       <div class="flex-none h-full w-full rounded-full bg-black p-1">
-        <app-trafic></app-trafic>
+        <svg-trafic></svg-trafic>
       </div>
     </div>
   </div>

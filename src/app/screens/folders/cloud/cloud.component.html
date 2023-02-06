@@ -8,7 +8,9 @@
         <button
           class="text-gray-500 font-light text-base"
           mat-button>
-          <mat-icon class="material-symbols-outlined text-green-500">add_circle</mat-icon>
+          <mat-icon class="material-symbols-outlined text-green-500">
+            add_circle
+          </mat-icon>
           Créer un dossier
         </button>
       </div>
@@ -16,7 +18,9 @@
         <button
           class="text-gray-500 font-light text-base"
           mat-button>
-          <mat-icon class="text-sky-500">arrow_circle_down</mat-icon>
+          <mat-icon class="text-sky-500">
+            arrow_circle_down
+          </mat-icon>
           Importer des fichiers
         </button>
       </div>
@@ -26,15 +30,15 @@
         </button>
       </div>
       <button
-        (click)="display_mode = 'list'"
+        (click)="switchDisplayMode('l')"
         mat-icon-button
-        class="{{display_mode === 'list' ? 'text-purple-500' : 'text-gray-500'}}">
+        class="{{!isGridMode ? 'text-purple-500' : 'text-gray-500'}}">
         <mat-icon>format_list_bulleted</mat-icon>
       </button>
       <button
-        (click)="display_mode = 'grid'"
+        (click)="switchDisplayMode('g')"
         mat-icon-button
-        class="{{display_mode === 'grid' ? 'text-purple-500' : 'text-gray-500'}}">
+        class="{{isGridMode ? 'text-purple-500' : 'text-gray-500'}}">
         <mat-icon>apps</mat-icon>
       </button>
     </div>
@@ -42,5 +46,6 @@
   <div class="h-full w-full overflow-y-auto">
     <app-folders-list class="block w-full p-3"></app-folders-list>
   </div>
-  <div class="flex-none {{currentFolder ? 'h-16' : 'h-0'}} bg-[#BBC2FF40] border-l border-white w-full"></div>
+  <div class="flex-none {{currentFolder ? 'h-16' : 'h-0'}} bg-[#BBC2FF40] border-l border-white w-full">
+  </div>
 </div>

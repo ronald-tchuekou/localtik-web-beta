@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'svg-file-side',
-  templateUrl: './file-side.component.html',
+  selector: 'svg-cloud',
+  templateUrl: './svg-cloud.component.html',
   styles: [
   ]
 })
-export class FileSideComponent implements OnInit {
+export class SvgCloudComponent implements OnInit {
   @Input() activated = false
 
   constructor() { }

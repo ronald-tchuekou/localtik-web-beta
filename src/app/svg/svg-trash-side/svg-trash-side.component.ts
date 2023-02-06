@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'svg-clock-side',
-  templateUrl: './clock-side.component.html',
+  selector: 'svg-trash-side',
+  templateUrl: './svg-trash-side.component.html',
   styles: [
   ]
 })
-export class ClockSideComponent implements OnInit {
+export class SvgTrashSideComponent implements OnInit {
   @Input() activated = false
 
   constructor() { }

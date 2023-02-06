@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-cloud',
-  templateUrl: './cloud.component.html',
+  selector: 'svg-clock-side',
+  templateUrl: './svg-clock-side.component.html',
   styles: [
   ]
 })
-export class CloudComponent implements OnInit {
+export class SvgClockSideComponent implements OnInit {
   @Input() activated = false
 
   constructor() { }

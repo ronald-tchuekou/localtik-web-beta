@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ImageLoaderComponent } from './image-loader.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ImageLoaderComponent} from './image-loader.component';
 
 
 @NgModule({
@@ -15,4 +14,5 @@ import { ImageLoaderComponent } from './image-loader.component';
     ImageLoaderComponent
   ]
 })
-export class ImageLoaderModule { }
+export class ImageLoaderModule {
+}

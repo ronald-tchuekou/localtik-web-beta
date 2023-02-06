@@ -14,15 +14,15 @@ import {MatIconModule} from "@angular/material/icon";
   declarations: [
     DashboardComponent,
   ],
-    imports: [
-        CommonModule,
-        DashboardRoutingModule,
-        ImageLoaderModule,
-        HeaderModule,
-        ChartModule,
-        HomeEstablishmentsModule,
-        MatIconModule
-    ],
+  imports: [
+    CommonModule,
+    DashboardRoutingModule,
+    ImageLoaderModule,
+    HeaderModule,
+    ChartModule,
+    HomeEstablishmentsModule,
+    MatIconModule
+  ],
   exports: []
 })
 export class DashboardModule {

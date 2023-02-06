@@ -7,7 +7,10 @@ import {DEFAULT_FOLDER, Folder} from "../../../../../models/Folder";
   styles: []
 })
 export class FolderListItemComponent implements OnInit {
-  @Input() folder: Folder = DEFAULT_FOLDER
+  @Input()
+  folder: Folder = DEFAULT_FOLDER
+  @Input()
+  isListMode: boolean = false;
 
   constructor() {
   }

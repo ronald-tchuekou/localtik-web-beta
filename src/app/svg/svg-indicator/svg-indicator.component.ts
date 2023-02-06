@@ -1,11 +1,11 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-indicator',
-  templateUrl: './indicator.component.html',
+  selector: 'svg-indicator',
+  templateUrl: './svg-indicator.component.html',
   styles: []
 })
-export class IndicatorComponent implements OnInit {
+export class SvgIndicatorComponent implements OnInit {
   @ViewChild('svg') svg: any
 
   constructor() {

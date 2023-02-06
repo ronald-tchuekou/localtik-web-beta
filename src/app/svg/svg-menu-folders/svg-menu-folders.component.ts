@@ -1,12 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-folders',
-  templateUrl: './folders.component.html',
+  selector: 'svg-menu-folders',
+  templateUrl: './svg-menu-folders.component.html',
   styles: [
   ]
 })
-export class FoldersComponent implements OnInit {
+export class SvgMenuFoldersComponent implements OnInit {
   @Input() activated = false
 
   constructor() { }

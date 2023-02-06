@@ -47,7 +47,7 @@ export class SideMenuItemComponent implements OnInit, OnChanges {
     if (sub_menu) {
       sub_menu.style.transition = `300ms`
       if (this.show) {
-        sub_menu.style.height = `${this.subMenu.length * 38}px`
+        sub_menu.style.height = `${this.subMenu.length * 40}px`
         sub_menu.style.paddingTop = `0.3rem`
         sub_menu.style.paddingBottom = `0.3rem`
       } else {

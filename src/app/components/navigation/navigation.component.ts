@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
 import {NavigationItemComponent} from "./navigation-item/navigation-item.component";
-import {IndicatorComponent} from "../../svg/indicator/indicator.component";
+import {SvgIndicatorComponent} from "../../svg/svg-indicator/svg-indicator.component";
 
 @Component({
   selector: 'app-navigation',
@@ -10,7 +10,7 @@ import {IndicatorComponent} from "../../svg/indicator/indicator.component";
 })
 export class NavigationComponent implements OnInit, AfterViewInit {
   currentPath: string = ''
-  @ViewChild("indicatorComponent") indicatorComponent: IndicatorComponent | any
+  @ViewChild("indicatorComponent") indicatorComponent: SvgIndicatorComponent | any
   @ViewChild("navItem1") navItem1: NavigationItemComponent | any
   @ViewChild("navItem2") navItem2: NavigationItemComponent | any
   @ViewChild("navItem3") navItem3: NavigationItemComponent | any
